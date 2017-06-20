@@ -1,6 +1,8 @@
 \ ws2812b.fs
 \ Some basic methods for driving WS2812B LEDs using DMA on SPI2.
 \ Only tested on *Blue Pill*, timing depends on 72MHz CPU clock.
+\ Don't forget to lower VCC for the LED Strip one diode drop below
+\ 5V so the 3.3V data is recognized. 
 \ Output is on MOSI2 (PB15)
 \ 
 \ Needs spi2.fs
@@ -23,7 +25,7 @@
 \  Configuration
 \ --------------------------------------------------
 
-\ maximum number of LEDs (using 9 Bytes of memory each!)
+\ number of LEDs (using 9 Bytes of memory each!)
 [ifndef] MAX-LEDS 60 constant MAX-LEDS [then]
 
 
