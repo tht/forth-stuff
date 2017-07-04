@@ -34,7 +34,7 @@
     timediff lastm ! CR 0 . h.2
   else
     timediff dup lastm @ - 5 > if
-      dup CR . swap h.2
+      dup lastm @ - CR . swap h.2
     else
       swap h.2
     then
