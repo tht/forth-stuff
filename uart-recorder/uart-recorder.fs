@@ -44,7 +44,7 @@
 
 : clear-uart-buf ( - )
   begin
-    uart-ring ring# 0= while
+    uart-ring ring# 0<> while
     uart-ring ring>
   repeat
 ;
